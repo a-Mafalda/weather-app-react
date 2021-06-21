@@ -16,17 +16,13 @@ export default function MainInfo() {
 
         <ReactAnimatedWeather
         icon="CLEAR_DAY"
-        color="#eea9a5"
+        color="#c6b0d5"
         size={110}
         animate={true}
-        display= "block"
-        margin= "0 auto"
-        padding-top= {15}
-        width= {180}
-        
-      />
+        />
       </div>
       <br/>
+       <br/>
       <ul>
         <li className="default-city">
           <span>{CurrentData.city}</span>, {CurrentData.code}
