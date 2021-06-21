@@ -1,13 +1,12 @@
 import React from "react";
 
-import "./Weather.css";
-
 import Forecast from "./Forecast.js";
 import MainInfo from "./MainInfo";
 import WeatherInfo from "./WeatherInfo.js";
 import FavouriteCities from "./FavouriteCities.js";
 import SearchEngine from "./SearchEngine.js";
 import Footnote from "./Footnote.js";
+import "./Weather.css";
 
 export default function App() {
   return (
