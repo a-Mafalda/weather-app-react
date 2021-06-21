@@ -1,0 +1,17 @@
+a {
+  text-decoration: none;
+  color: rgb(198, 176, 213);
+}
+
+.favorite-cities {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.city1 {
+  color: #676767;
+}
+a:hover {
+  color: rgb(198, 176, 213);
+}
