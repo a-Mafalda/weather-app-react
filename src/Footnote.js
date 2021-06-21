@@ -1,6 +1,6 @@
 import React from "react";
-
 import "./Footnote.css";
+
 
 export default function Footnote() {
   return (
@@ -10,6 +10,7 @@ export default function Footnote() {
         target="_blank"
         className="footnote"
         rel="noreferrer"
+        
       >
         Open-sourced code
       </a>
