@@ -1,5 +1,4 @@
 import React from "react";
-
 import Forecast from "./Forecast.js";
 import MainInfo from "./MainInfo";
 import WeatherInfo from "./WeatherInfo.js";
@@ -8,11 +7,10 @@ import SearchEngine from "./SearchEngine.js";
 import Footnote from "./Footnote.js";
 import "./Weather.css";
 
-export default function App() {
+export default function Weather() {
   return (
-    <div className="App">
-      <div className="container">
-        <div className="weather-app-wrapper">
+   
+      <div className="weather-app-wrapper">
           <div className="weather-app">
             <Forecast />
             <MainInfo />
@@ -27,7 +25,5 @@ export default function App() {
           </div>
           <Footnote />
         </div>
-      </div>
-    </div>
-  );
+     );
 }

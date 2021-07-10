@@ -5,12 +5,12 @@ export default function FavouriteCities() {
   return (
     <div class="row favorite-cities">
       <div class="col-md-3">
-        <a href="/" className="city1">
+        <a href="/" className="city1" >
           Paris
         </a>
       </div>
       <div class="col-md-3">
-        <a href="/" className="city1">
+        <a href="/" className="city1" >
           Berlin
         </a>
       </div>
@@ -20,7 +20,7 @@ export default function FavouriteCities() {
         </a>
       </div>
       <div class="col-md-3">
-        <a href="/" className="city1">
+        <a href="/" className="city1" >
           London
         </a>
       </div>
