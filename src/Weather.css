@@ -21,3 +21,49 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   background-color: rgb(226 229 222);
 }
+
+.mainPicture {
+  display: block;
+  margin: 0 auto;
+  padding-top: 60px;
+  width: 180px;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  line-height: 19px;
+  text-transform: capitalize;
+}
+
+.default-city {
+  font-size: 16px;
+  margin-top: -25px;
+}
+
+.current-date {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.main-temp {
+  text-align: center;
+  padding-top: 15px;
+  margin-top: -10px;
+}
+
+.main-temp strong {
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.main-temp .units {
+  position: relative;
+  font-size: 10px;
+  top: -30px;
+  left: 2px;
+}
