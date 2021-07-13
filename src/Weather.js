@@ -2,12 +2,13 @@ import React, { useState }  from "react";
 import axios from "axios";
 import ReactAnimatedWeather from 'react-animated-weather';
 import Forecast from "./Forecast.js";
+import FormatDate from "./FormatDate.js";
 import FavouriteCities from "./FavouriteCities.js";
 import SearchEngine from "./SearchEngine.js";
 import Footnote from "./Footnote.js";
 import "./Weather.css";
 
-export default function Weather() {
+export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ready: false});
   function handleResponse(response) {
     
@@ -15,18 +16,15 @@ export default function Weather() {
      ready: true,
      temperature: response.data.main.temp, 
      wind: response.data.wind.speed,
-     date: "Monday, June 21 14:20", 
+     date: new Date(response.data.dt * 1000), 
      humidity: response.data.main.humidity,
      minTemp: response.data.main.temp_min,
      maxTemp: response.data.main.temp_max,
      countryCode: response.data.sys.country,
      description: response.data.weather[0].description,
      city: response.data.name,
-     
- });
- 
-}
-
+  });
+ }
 if (weatherData.ready) {
   return (
    <div className="weather-app-wrapper">
@@ -49,7 +47,9 @@ if (weatherData.ready) {
           <span className="countryCode">{weatherData.countryCode} {""}</span>
           <span>{weatherData.description}</span>
         </li>
-        <li className="current-date">{weatherData.date}</li>
+        <li className="current-date">
+          <FormatDate date={weatherData.date} />
+        </li>
       </ul>
       <div className="main-temp">
       <strong>{Math.round(weatherData.temperature)}</strong>
@@ -92,7 +92,7 @@ if (weatherData.ready) {
 
 } else {
   const apiKey = `24339c80e2bf7704d552d34cc3af1800`;
-  let aipUrl = `https://api.openweathermap.org/data/2.5/weather?q=lisbon&appid=${apiKey}&units=metric`;
+  let aipUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
   axios.get(aipUrl).then(handleResponse);
 
   return "Loading...";
