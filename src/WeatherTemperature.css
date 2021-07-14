@@ -1,12 +1,9 @@
-.footnote a {
+.units a {
   text-decoration: none;
-}
-
-.footnote a:hover {
   color: rgb(198, 176, 213);
+  font-size: larger;
 }
 
-small {
+.units a:hover {
   color: #676767;
-  font-size: 12px;
 }
