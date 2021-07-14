@@ -21,14 +21,17 @@ body {
   background-color: rgb(226 229 222);
 }
 
-.mainPicture canvas {
+.mainPicture {
   display: block;
-  margin: 0 118px;
+  margin: 0 119px;
   padding-top: 50px;
-  width: 150px;
 }
 
 ul {
+  display: block;
+  margin: 0 auto;
+}
+.weatherInfo {
   text-align: center;
 }
 
@@ -41,7 +44,6 @@ li {
 .default-city {
   font-size: 16px;
   margin-top: -40px;
-  text-align: center;
 }
 
 .current-date {
@@ -59,6 +61,7 @@ li {
   font-size: 64px;
   font-weight: 600;
   line-height: 20px;
+  text-align: center;
 }
 
 .main-temp .units {

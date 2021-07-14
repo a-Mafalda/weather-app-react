@@ -1,6 +1,12 @@
+small {
+  display: block;
+  margin: 0 auto;
+}
+
 .footnote {
   color: #676767;
   font-size: 12px;
+  text-align: center;
 }
 
 .footnote a {

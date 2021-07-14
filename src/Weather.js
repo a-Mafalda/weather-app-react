@@ -57,7 +57,7 @@ if (weatherData.ready) {
      </div>
       <br/>
        <br/>
-      <ul>
+      <ul className="weatherInfo">
         <li className="default-city">
           <span>{weatherData.city}</span>, {""}
           <span className="countryCode">{weatherData.countryCode} {""}</span>
@@ -67,8 +67,9 @@ if (weatherData.ready) {
           <FormatDate date={weatherData.date} />
         </li>
       </ul>
-      <WeatherTemperature celsius={weatherData.temperature}/>
-    
+      <div className="main-temp">
+      <WeatherTemperature celsius={(weatherData.temperature)}/>
+    </div>
       <br/>
       <hr/>
     <div className="row weather-info">
