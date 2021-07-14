@@ -4,7 +4,7 @@ import Forecast from "./Forecast.js";
 import FormatDate from "./FormatDate.js";
 import FavouriteCities from "./FavouriteCities.js";
 import Footnote from "./Footnote.js";
-import weatherIcon from "./weatherIcon";
+import WeatherIcon from "./WeatherIcon.js";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -52,7 +52,7 @@ if (weatherData.ready) {
             <Forecast />
             <div className="mainInfo">
               <div className="mainPicture">
-       < weatherIcon code={props.data.icon} />
+       < WeatherIcon code={weatherData.icon} />
      </div>
       <br/>
        <br/>
@@ -79,19 +79,19 @@ if (weatherData.ready) {
       <hr/>
     <div className="row weather-info">
       <div className="col-6">
-        Min: 
+        Min: {""}
         <span>{weatherData.minTemp}</span>°C
       </div>
       <div className="col-6">
-        Max: 
+        Max: {""} 
         <span>{weatherData.maxTemp}</span>°C
       </div>
       <div className="col-6">
-        Humidity: 
+        Humidity: {""}
         <span>{weatherData.humidity}</span>%
       </div>
       <div className="col-6">
-        Wind: <span>{weatherData.wind}</span> m/s
+        Wind: {""}<span>{weatherData.wind}</span> m/s
       </div>
     </div>
     </div>

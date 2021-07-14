@@ -1,7 +1,6 @@
 body {
   font-family: "Source Sans Pro", sans-serif;
   opacity: 0.7;
-  text-align: center;
 }
 
 .weather-app-wrapper {
@@ -24,25 +23,25 @@ body {
 
 .mainPicture canvas {
   display: block;
-  margin: 0 auto;
-  padding-top: 60px;
-  width: 180px;
+  margin: 0 118px;
+  padding-top: 50px;
+  width: 150px;
 }
 
 ul {
-  padding: 0;
+  text-align: center;
 }
 
 li {
   list-style: none;
-  text-align: center;
   line-height: 19px;
   text-transform: capitalize;
 }
 
 .default-city {
   font-size: 16px;
-  margin-top: -25px;
+  margin-top: -40px;
+  text-align: center;
 }
 
 .current-date {
@@ -53,6 +52,7 @@ li {
 .main-temp {
   padding-top: 15px;
   margin-top: -10px;
+  text-align: center;
 }
 
 .main-temp strong {
@@ -70,7 +70,7 @@ li {
 
 .weather-info {
   position: relative;
-  left: 25px;
+  left: 35px;
 }
 
 input[type="search"] {
