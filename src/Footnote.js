@@ -4,11 +4,11 @@ import "./Footnote.css";
 
 export default function Footnote() {
   return (
-    <small>
+    <small className="footnote">
       <a
         href="https://github.com/a-Mafalda/weather-app-react"
         target="_blank"
-        className="footnote"
+        
         rel="noreferrer"
         
       >
