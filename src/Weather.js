@@ -3,6 +3,7 @@ import axios from "axios";
 import Forecast from "./Forecast.js";
 import FormatDate from "./FormatDate.js";
 import FavouriteCities from "./FavouriteCities.js";
+import WeatherTemperature from "./WeatherTemperature.js";
 import Footnote from "./Footnote.js";
 import WeatherIcon from "./WeatherIcon.js";
 import "./Weather.css";
@@ -66,15 +67,8 @@ if (weatherData.ready) {
           <FormatDate date={weatherData.date} />
         </li>
       </ul>
-      <div className="main-temp">
-      <strong>{Math.round(weatherData.temperature)}</strong>
-      <span className="units">
-        <a href="/" className="active">
-          °C{" "}
-        </a>
-        | <a href="/">°F </a>
-      </span>
-    </div>
+      <WeatherTemperature celsius={weatherData.temperature}/>
+    
       <br/>
       <hr/>
     <div className="row weather-info">
