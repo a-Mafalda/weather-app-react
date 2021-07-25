@@ -14,6 +14,7 @@ export default function Weather(props) {
   function handleResponse(response) {
     setWeatherData({
      ready: true,
+     coord: response.data.coord,
      temperature: response.data.main.temp, 
      wind: response.data.wind.speed,
      date: new Date(response.data.dt * 1000), 
@@ -50,10 +51,10 @@ if (weatherData.ready) {
   return (
    <div className="weather-app-wrapper">
           <div className="weather-app">
-            <Forecast />
+            <Forecast coordinates={weatherData.coord}/>
             <div className="mainInfo">
               <div className="mainPicture">
-       < WeatherIcon code={weatherData.icon} />
+       < WeatherIcon code={weatherData.icon} size={140} color="#c6b0d5"/>
      </div>
       <br/>
        <br/>
