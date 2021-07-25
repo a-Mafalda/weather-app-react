@@ -2,7 +2,6 @@ import React, { useState }  from "react";
 import axios from "axios";
 import Forecast from "./Forecast.js";
 import FormatDate from "./FormatDate.js";
-import FavouriteCities from "./FavouriteCities.js";
 import WeatherTemperature from "./WeatherTemperature.js";
 import Footnote from "./Footnote.js";
 import WeatherIcon from "./WeatherIcon.js";
@@ -91,37 +90,28 @@ if (weatherData.ready) {
       </div>
     </div>
     </div>
-           <hr />
-            <FavouriteCities />
-            <hr />
-
-            <div>
+      <hr />
+    <div className="search"> 
+    <form onSubmit={handleSubmit}>
       <div className="row">
-        <div className="col-6">
-          <form onSubmit={handleSubmit}>
-            <input
+        <div className="col-9">
+           <input
               onChange={updateCity}
               type="search"
               placeholder="Let's go somewhere..."
               className="form-control-sm mb-3"
               autoFocus={true}
             />
-          </form>
-        </div>
+            </div>
 
         <div className="col-3">
           <input type="submit" className="form-control-sm btn" value="Go!" />
-        </div>
-
-        <div className="col-3">
-          <button className="form-control-sm btn border-0">
-            <i className="fas fa-map-marker"></i>
-          </button>
-        </div>
       </div>
-    </div>
-  
-          </div>
+      </div>
+      </form>
+        </div>
+         
+           </div>
           <Footnote />
         </div>
      );
