@@ -31,10 +31,12 @@ setLoaded(false);
          if (index < 4) {
            return(
             <div className="col-md-3" key={index}>
-        {day()} {" "} 
+        {day(dailyForecast)} {" "} 
         <WeatherIcon code={dailyForecast.weather[0].icon} size={25} color="#676767"/>
         </div>
         );
+        } else {
+          return null;
         }
       })}
         </div>

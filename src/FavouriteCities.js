@@ -11,7 +11,7 @@ export default function FavouriteCities() {
       </div>
       <div class="col-md-3">
         <a href="/" className="city1" >
-          Berlin
+          Stockolm
         </a>
       </div>
       <div class="col-md-3">
