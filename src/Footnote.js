@@ -14,7 +14,7 @@ export default function Footnote() {
       >
         Open-sourced code
       </a>
-      , by Mafalda Fonseca.
+      , by Mafalda Fonsecada Costa.
     </small>
   );
 }

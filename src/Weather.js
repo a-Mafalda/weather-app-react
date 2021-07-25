@@ -75,11 +75,11 @@ if (weatherData.ready) {
     <div className="row weather-info">
       <div className="col-6">
         Min: {""}
-        <span>{weatherData.minTemp}</span>°C
+        <span>{Math.round(weatherData.minTemp)}</span>°C
       </div>
       <div className="col-6">
         Max: {""} 
-        <span>{weatherData.maxTemp}</span>°C
+        <span>{Math.round(weatherData.maxTemp)}</span>°C
       </div>
       <div className="col-6">
         Humidity: {""}

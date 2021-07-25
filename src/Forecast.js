@@ -23,6 +23,15 @@ setLoaded(false);
     return days[day];
   }
 
+  function load() {
+  let apiKey = `24339c80e2bf7704d552d34cc3af1800`;
+  let longitude = props.coordinates.lon;
+  let latitude = props.coordinates.lat;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude={part}&appid=${apiKey}&units=metric`;
+  
+  axios.get(apiUrl).then(handleResponse);
+  }
+
   if (loaded) {
     return (
     <div className="weekly-forecast">
@@ -44,13 +53,7 @@ setLoaded(false);
     );
 
   } else {
-  let apiKey = `24339c80e2bf7704d552d34cc3af1800`;
-  let longitude = props.coordinates.lon;
-  let latitude = props.coordinates.lat;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude={part}&appid=${apiKey}&units=metric`;
-  
-  axios.get(apiUrl).then(handleResponse);
-
-  return null;
+      load() 
+    return null;
 }
  }
