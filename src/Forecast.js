@@ -16,8 +16,8 @@ setLoaded(false);
       setLoaded(true);
   }
 
-  function day(){
-    let date = new Date(forecast[0].dt * 1000);
+  function day(timestamp){
+    let date = new Date(timestamp * 1000);
     let day = date.getDay();
     let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
     return days[day];
@@ -40,7 +40,7 @@ setLoaded(false);
          if (index < 4) {
            return(
             <div className="col-md-3" key={index}>
-        {day(dailyForecast)} {" "} 
+        <span>{day(dailyForecast.dt)} {" "} {" "} </span>
         <WeatherIcon code={dailyForecast.weather[0].icon} size={25} color="#676767"/>
         </div>
         );
